@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  main:
+    image: jenkins/jenkins:${TAG:-lts-alpine}
+    volumes:
+      - $PWD/docker/jenkins:/var/jenkins_home
+

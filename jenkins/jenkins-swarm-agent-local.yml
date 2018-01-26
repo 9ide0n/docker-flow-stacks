@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+
+  main:
+    image: vfarcic/jenkins-swarm-agent
+    volumes:
+      - /hosthome/gide0n/.docker/machine/machines:/machines
+    deploy:
+      placement:
+        constraints: [node.labels.env == jenkins-agent]
